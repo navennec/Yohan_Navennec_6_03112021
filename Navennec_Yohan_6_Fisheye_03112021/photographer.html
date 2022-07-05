@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photographe - Fisheye</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div id="page-container">
+      <header>
+        <div class="header-container">
+          <a href="index.html" class="focus">
+            <img
+              class="logo"
+              src="images/logo/fisheyelogo.svg"
+              alt="Page d'accueil Fisheye"
+            />
+          </a>
+        </div>
+      </header>
+      <main>
+        <div id="photographer-main-content" aria-hidden="false">
+          <section class="photographer-banner"></section>
+          <section class="photographer-media">
+            <div class="media-filter">
+              <p id="orderby">Trier par</p>
+              <div class="dropdown">
+                <button
+                  tabindex="0"
+                  class="dropdown__toggle btn focus"
+                  type="button"
+                  aria-haspopup="listbox"
+                  aria-labelledby="orderby orderbybtn"
+                  id="orderbybtn"
+                >
+                  Popularité
+                </button>
+                <ul
+                tabindex="-1"   
+                  class="dropdown__menu"
+                  role="listbox"
+                  aria-expanded="false"
+                  aria-labelledby="orderby"
+                >
+                  <li role="option" tabindex="0">Date</li>
+                  <li role="option" tabindex="0">Titre</li>
+                </ul>
+              </div>
+            </div>
+            <div class="media-display"></div>
+          </section>
+          <div class="like-counter"></div>
+        </div>
+      </main>
+      <div class="modal-background"></div>
+      <div
+        class="modal"
+        role="dialog"
+        aria-hidden="true"
+      ></div>
+      <div
+        class="lightbox hidden"
+        role="dialog"
+        aria-label="Vue média"
+        aria-hidden="true"
+      ></div>
+    </div>
+    <script type="module" src="./js/photographer.js"></script>
+    <script type="module" src="./js/modal.js"></script>
+  </body>
+</html>

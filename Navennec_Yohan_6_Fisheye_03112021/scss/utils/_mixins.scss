@@ -1,0 +1,29 @@
+//media queries
+@mixin breakpoint-xxl {
+  @media screen and (max-width: map-get($breakpoints, xxl )) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xl {
+    @media screen and (max-width: map-get($breakpoints, xl)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-lg {
+    @media screen and (max-width: map-get($breakpoints, lg)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-md {
+    @media screen and (max-width: map-get($breakpoints, md)) {
+        @content;
+    }
+}
+@mixin breakpoint-sm {
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+        @content;
+    }
+}

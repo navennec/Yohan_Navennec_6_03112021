@@ -1,0 +1,42 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+  &:focus{
+    outline: 4px dotted #00B023;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color-primary;
+}
+li {
+  list-style: none;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+
+#page-container {
+  max-width: 1440px;
+  width: 100%;
+  position: relative;
+  margin: 0 70px;
+  @include breakpoint-xxl {
+    margin: 0 30px;
+  }
+ @include breakpoint-sm {
+   margin: 0 10px;
+ } 
+}
+
+body {
+  display: flex;
+  justify-content: center;
+
+}

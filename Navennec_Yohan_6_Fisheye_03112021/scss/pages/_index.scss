@@ -1,0 +1,90 @@
+@import "../utils/variables";
+@import "../utils/placeholders";
+
+.index-main-title {
+  position: absolute;
+  right: 20px;
+  top: 37px;
+  color: $color-primary;
+  font-weight: normal;
+  @include breakpoint-lg {
+    font-size: 1.5rem;
+  }
+  @include breakpoint-sm {
+    font-size: 1rem;
+    top: 43px;
+  }
+}
+
+.photographer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 20px;
+  padding: 1rem;
+  @include breakpoint-xl {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include breakpoint-md {
+    grid-template-columns: 1fr;
+  }
+  @include breakpoint-sm {
+    margin-top: 50px;
+  }
+}
+.photographer {
+  @extend %flex-center;
+  text-align: center;
+  flex-direction: column;
+  margin: 50px 0;
+  width: 100%;
+  img {
+    width: 250px;
+    height: 250px;
+    @include breakpoint-sm{
+      width: 150px;
+      height: 150px;
+    }
+  }
+  @include breakpoint-md {
+    margin: 20px 0;
+  }
+  ul {
+    display: flex;
+  }
+  &__description {
+    padding: 0.5rem;
+    @include breakpoint-sm{
+      font-size: 14px;
+    }
+  }
+  &__name {
+    font-size: 28px;
+    @include breakpoint-sm{
+      font-size: 22px;
+    }
+  }
+  &__price {
+    color: #757575;
+  }
+}
+.main-link {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  font-weight: 700;
+  padding: 0.5rem;
+  background: $color-primary;
+  margin: 5px 0;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  transition: 0.5s;
+  &:hover,
+  &:focus {
+    background: $bg-secondary;
+    color: #000;
+  }
+}
